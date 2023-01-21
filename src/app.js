@@ -24,7 +24,7 @@ let valorCarta = [
   "10",
   "J",
   "Q",
-  "K",
+  "K"
 ];
 let player = ["", "", ""];
 
