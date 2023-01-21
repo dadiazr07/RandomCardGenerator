@@ -11,6 +11,11 @@ body {
   font-family: Righteous;
 }
 
+/* .machine {
+  scale: 50%;
+  margin: -200px;
+} */
+
 .cartaBody {
   margin: 100px;
   background-color: whitesmoke;
@@ -21,7 +26,7 @@ body {
   text-align: center;
   align-items: center;
   justify-content: center;
-  box-shadow: 5px 10px 50px 15px rgb(41, 40, 59);
+  box-shadow: 20px 20px 100px 10px rgb(41, 40, 59);
 }
 
 .carta {
