@@ -34,7 +34,7 @@ function genCards(Array1, Array2) {
   function valorRandom(Array2) {
     return Array2[Math.floor(Math.random() * Array2.length)];
   }
-
+  let player = [];
   let carta1 = [];
   let carta2 = [];
   let carta3 = [];
@@ -65,10 +65,9 @@ function genCards(Array1, Array2) {
     carta3.push(icon);
     carta3.push(valor);
   }
-
-  console.log(carta1);
-  console.log(carta2);
-  console.log(carta3);
+  player.push(carta1);
+  player.push(carta2);
+  player.push(carta3);
+  return player;
 }
-
 console.log(genCards(iconos, valorCarta));
