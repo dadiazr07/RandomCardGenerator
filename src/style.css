@@ -46,13 +46,13 @@ body {
   position: absolute;
   z-index: 0;
   rotate: 30deg;
-  translate: 60% 5%;
+  translate: 65% 5%;
 }
 .carta2 {
   position: absolute;
   z-index: 3;
   rotate: -30deg;
-  translate: -60% 10%;
+  translate: -65% 10%;
 }
 
 span {

@@ -85,6 +85,28 @@ function genCards(Array1, Array2) {
 function shuffle() {
   genCards(iconos, valorCarta);
   console.log(player);
+
+  let iconsCarta1 = document
+    .getElementById("carta1")
+    .getElementsByClassName("iconoCar1");
+  iconsCarta1[0].innerHTML = player[0][0];
+  iconsCarta1[1].innerHTML = player[0][0];
+  document.getElementById("numberCar1").innerHTML = player[0][1];
+
+  let iconsCarta2 = document
+    .getElementById("carta2")
+    .getElementsByClassName("iconoCar2");
+  iconsCarta2[0].innerHTML = player[1][0];
+  iconsCarta2[1].innerHTML = player[1][0];
+  document.getElementById("numberCar2").innerHTML = player[1][1];
+
+  let iconsCarta3 = document
+    .getElementById("carta3")
+    .getElementsByClassName("iconoCar3");
+  iconsCarta3[0].innerHTML = player[2][0];
+  iconsCarta3[1].innerHTML = player[2][0];
+  document.getElementById("numberCar3").innerHTML = player[2][1];
+
+  // // Esto resetea Player array
   player = ["", "", ""];
-  // document.getElementById("icono").innerHTML = player[0][0];
 }
