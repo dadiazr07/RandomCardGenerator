@@ -26,6 +26,8 @@ let valorCarta = [
   "K"
 ];
 
+// // Funcion paga generar valores e iconos aleatorios
+
 function genCards(Array1, Array2) {
   function iconoRandom(Array1) {
     return Array1[Math.floor(Math.random() * Array1.length)];
@@ -71,3 +73,5 @@ function genCards(Array1, Array2) {
   return player;
 }
 console.log(genCards(iconos, valorCarta));
+
+// // Funcion para modificar contenido HTML de las cartas
