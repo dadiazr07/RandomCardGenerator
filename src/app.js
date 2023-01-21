@@ -7,6 +7,7 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   //write your code here
+  document.getElementById("shuffle").addEventListener("click", shuffle);
 };
 
 let iconos = ["♦", "♥", "♠", "♣"];
@@ -25,55 +26,65 @@ let valorCarta = [
   "Q",
   "K"
 ];
+let player = ["", "", ""];
 
 // // Funcion paga generar valores e iconos aleatorios
 
 function genCards(Array1, Array2) {
+  let carta1 = ["", ""];
+  let carta2 = ["", ""];
+  let carta3 = ["", ""];
+
   function iconoRandom(Array1) {
-    return Array1[Math.floor(Math.random() * Array1.length)];
+    let pinta = Array1[Math.floor(Math.random() * Array1.length)];
+    return pinta;
   }
 
   function valorRandom(Array2) {
-    return Array2[Math.floor(Math.random() * Array2.length)];
-  }
-  let player = [];
-  let carta1 = [];
-  let carta2 = [];
-  let carta3 = [];
-  let icon = 0;
-  let valor = 0;
-
-  carta1.push(iconoRandom(Array1));
-  carta1.push(valorRandom(Array2));
-  icon = iconoRandom(Array1);
-  valor = valorRandom(Array2);
-
-  if (icon == carta1[0]) {
-    icon = iconoRandom(Array1);
-    valor = valorRandom(Array2);
-    carta2.push(icon);
-    carta2.push(valor);
-  } else {
-    carta2.push(icon);
-    carta2.push(valor);
+    let numeroCarta = Array2[Math.floor(Math.random() * Array2.length)];
+    return numeroCarta;
   }
 
-  if (icon == carta1[0] || icon == carta2[0]) {
-    icon = iconoRandom(Array1);
-    valor = valorRandom(Array2);
-    carta3.push(icon);
-    carta3.push(valor);
-  } else {
-    carta3.push(icon);
-    carta3.push(valor);
+  function card1() {
+    let pinta1 = iconoRandom(Array1);
+    let numeroCarta = valorRandom(Array2);
+    carta1[0] = pinta1;
+    carta1[1] = numeroCarta;
+    player[0] = carta1;
+    numeroCarta = "";
   }
-  player.push(carta1);
-  player.push(carta2);
-  player.push(carta3);
+
+  function card2() {
+    let pinta2 = iconoRandom(Array1);
+    let numeroCarta = valorRandom(Array2);
+    carta2[0] = pinta2;
+    carta2[1] = numeroCarta;
+    player[1] = carta2;
+    numeroCarta = "";
+  }
+
+  function card3() {
+    let pinta3 = iconoRandom(Array1);
+    let numeroCarta = valorRandom(Array2);
+    carta3[0] = pinta3;
+    carta3[1] = numeroCarta;
+    player[2] = carta3;
+    numeroCarta = "";
+  }
+
+  card1();
+  card2();
+  card3();
   return player;
 }
-console.log(genCards(iconos, valorCarta));
 
-// // Funcion para modificar contenido HTML de las cartas
+// Para chckear la funcion en el inspector
+// genCards(iconos, valorCarta);
+// console.log(player);
 
-function modifCarta(params) {}
+function shuffle() {
+  genCards(iconos, valorCarta);
+  console.log(player);
+  player = ["", "", ""];
+  // document.getElementById("icono").innerHTML = player[0][0];
+}

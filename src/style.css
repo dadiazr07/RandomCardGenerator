@@ -130,7 +130,7 @@ span {
   }
 }
 
-.btn {
+.shuffle {
   background: #7c398f;
   background-image: -webkit-linear-gradient(top, #7c398f, #36183e);
   background-image: -moz-linear-gradient(top, #7c398f, #36183e);
@@ -151,7 +151,7 @@ span {
   text-decoration: none;
 }
 
-.btn:hover {
+.shuffle:hover {
   background: #7c398f;
   text-decoration: none;
 }
