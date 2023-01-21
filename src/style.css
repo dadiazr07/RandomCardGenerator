@@ -55,11 +55,6 @@ body {
   translate: -60% 10%;
 }
 
-/* .carta3 {
-  position: absolute;
-  z-index: 2;
-} */
-
 span {
   margin: 0;
   height: 20%;
@@ -84,6 +79,7 @@ span {
 
 .icono2 {
   float: right;
+  rotate: 180deg;
 }
 
 .rotate-scale-up-vertical {

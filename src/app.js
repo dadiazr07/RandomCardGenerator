@@ -75,3 +75,5 @@ function genCards(Array1, Array2) {
 console.log(genCards(iconos, valorCarta));
 
 // // Funcion para modificar contenido HTML de las cartas
+
+function modifCarta(params) {}
