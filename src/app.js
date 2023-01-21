@@ -27,10 +27,6 @@ let valorCarta = [
 ];
 
 function genCards(Array1, Array2) {
-  let carta1 = [];
-  let carta2 = [];
-  let carta3 = [];
-
   function iconoRandom(Array1) {
     return Array1[Math.floor(Math.random() * Array1.length)];
   }
@@ -39,16 +35,36 @@ function genCards(Array1, Array2) {
     return Array2[Math.floor(Math.random() * Array2.length)];
   }
 
+  let carta1 = [];
+  let carta2 = [];
+  let carta3 = [];
+  let icon = 0;
+  let valor = 0;
+
   carta1.push(iconoRandom(Array1));
   carta1.push(valorRandom(Array2));
-  iconoRandom(Array1);
-  valorRandom(Array2);
-  carta2.push(iconoRandom(Array1));
-  carta2.push(valorRandom(Array2));
-  iconoRandom(Array1);
-  valorRandom(Array2);
-  carta3.push(iconoRandom(Array1));
-  carta3.push(valorRandom(Array2));
+  icon = iconoRandom(Array1);
+  valor = valorRandom(Array2);
+
+  if (icon == carta1[0]) {
+    icon = iconoRandom(Array1);
+    valor = valorRandom(Array2);
+    carta2.push(icon);
+    carta2.push(valor);
+  } else {
+    carta2.push(icon);
+    carta2.push(valor);
+  }
+
+  if (icon == carta1[0] || icon == carta2[0]) {
+    icon = iconoRandom(Array1);
+    valor = valorRandom(Array2);
+    carta3.push(icon);
+    carta3.push(valor);
+  } else {
+    carta3.push(icon);
+    carta3.push(valor);
+  }
 
   console.log(carta1);
   console.log(carta2);
