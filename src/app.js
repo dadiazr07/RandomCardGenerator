@@ -31,8 +31,10 @@ let player = [];
 function genCards(Array1, Array2) {
   let genericCard = [];
   for (let i = 0; i < 3; i++) {
-    genericCard[0] = Array1[Math.floor(Math.random() * Array1.length)];
-    genericCard[1] = Array2[Math.floor(Math.random() * Array2.length)];
+    let pinta = Array1[Math.floor(Math.random() * Array1.length)];
+    let valCart = Array2[Math.floor(Math.random() * Array2.length)];
+    genericCard[0] = pinta;
+    genericCard[1] = valCart;
     player[i] = genericCard;
     genericCard = [];
   }
