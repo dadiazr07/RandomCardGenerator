@@ -108,6 +108,10 @@ span {
   }
 }
 
+.restart {
+  animation: wobble-horizontal-bottom 0.8s linear both;
+}
+
 .shuffle {
   background: #7c398f;
   background-image: -webkit-linear-gradient(top, #7c398f, #36183e);
@@ -132,16 +136,4 @@ span {
 .shuffle:hover {
   background: #7c398f;
   text-decoration: none;
-}
-
-.spade {
-}
-
-.club {
-}
-
-.heart {
-}
-
-.diamond {
 }
